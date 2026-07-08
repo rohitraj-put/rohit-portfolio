@@ -230,4 +230,7 @@
   .about-section {
     padding: 72px 20px;
   }
+  .btn-primary {
+    padding: 8px 18px;
+  }
 }
