@@ -74,9 +74,7 @@ export default function Projects() {
           {projects.map((p) => (
             <div className="project-card" key={p.title}>
               <div className="project-thumb">
-                <img src={p.img}
-                  className="project-thumb-bg"
-                />
+                <img src={p.img} alt={p.title || "project image"} />
                 <div className="project-overlay" />
               </div>
               <div className="project-body">
