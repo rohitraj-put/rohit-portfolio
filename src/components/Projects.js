@@ -6,8 +6,17 @@ import jps from '../assets/projects/jps.png'
 import namrata from '../assets/projects/namrata-attendance.png'
 import carat from '../assets/projects/caratflitz.png'
 import jingle from '../assets/projects/jingle-holiday-bazar.png'
+import cp from '../assets/projects/compilace-pilot.PNG'
 
 const projects = [
+  {
+    title: 'Compliance Pilot - 🔴Coming Soon...',
+    desc: 'A compliance management SaaS front-end for CA firms and compliance consultants managing multiple client companies — licenses, renewals, documents, and regulatory tasks in one register.',
+    img: cp,
+    color: '#FFF7ED',
+    darkColor: '#2D1F0A',
+    link: '#',
+  },
   {
     title: 'Agile Regulatory',
     desc: 'A professional, accessibility-focused corporate website for a regulatory consultancy, featuring clear information architecture, fast load times, and responsive design to improve user trust and engagement.',
