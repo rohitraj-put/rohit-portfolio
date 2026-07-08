@@ -1,0 +1,124 @@
+/* ── TOKENS ── */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg: #FAFAF8;
+  --bg2: #F1F0ED;
+  --surface: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #0A0F1E;
+  --text2: #4B5563;
+  --text3: #9CA3AF;
+  --accent: #6366F1;
+  --accent2: #818CF8;
+  --accent-glow: rgba(99, 102, 241, 0.18);
+  --accent-light: #E0E7FF;
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.10);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --nav-bg: rgb(250, 250, 248);
+}
+
+[data-theme="dark"] {
+  --bg: #0A0F1E;
+  --bg2: #0F1629;
+  --surface: #141B2D;
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #F0F4FF;
+  --text2: #94A3B8;
+  --text3: #475569;
+  --accent: #818CF8;
+  --accent2: #6366F1;
+  --accent-glow: rgba(129, 140, 248, 0.20);
+  --accent-light: rgba(129, 140, 248, 0.12);
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.30);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.45);
+  --nav-bg: rgba(10, 15, 30, 0.88);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.35s, color 0.35s;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #C084FC);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ── FADE IN ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── KEYFRAMES ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%; }
+  25% { border-radius: 55% 45% 40% 60% / 55% 40% 60% 45%; }
+  50% { border-radius: 50% 50% 60% 40% / 40% 60% 45% 55%; }
+  75% { border-radius: 45% 55% 50% 50% / 60% 45% 55% 40%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
