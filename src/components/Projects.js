@@ -11,7 +11,7 @@ import cp from '../assets/projects/compilace-pilot.PNG'
 const projects = [
   {
     title: 'Compliance Pilot - 🔴Coming Soon...',
-    desc: 'A compliance management SaaS front-end for CA firms and compliance consultants managing multiple client companies — licenses, renewals, documents, and regulatory tasks in one register.',
+    desc: 'A compliance management solution for CA firms and compliance consultants managing multiple client companies — licenses, renewals, documents, and regulatory tasks in one register.',
     img: cp,
     color: '#FFF7ED',
     darkColor: '#2D1F0A',
